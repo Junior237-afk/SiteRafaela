@@ -42,7 +42,7 @@ botaoAgendar.addEventListener("click", function () {
 
 
     // Número do WhatsApp da Rafaela
-    const numeroRafaela = "5599988557664";
+    const numeroRafaela = "5599984180845";
 
 
     // Mensagem que será enviada
