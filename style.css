@@ -1,0 +1,846 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: oklab(78.118% 0.0065 0.00194);
+    color: #222;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu {
+    background-color: #d63384;
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.menu ul {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #ffd6e9;
+}
+
+
+/* BOTÃO AGENDAR DO MENU */
+
+.btn-agendar {
+    background-color: white;
+    color: #d63384 !important;
+
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+.btn-agendar:hover {
+    background-color: #ffe5f0;
+}
+
+
+/* =========================
+   SEÇÃO INICIAL
+========================= */
+
+.inicio {
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 80px;
+
+    padding: 60px 8%;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff 50%,
+        #fff0f6 100%
+    );
+}
+
+
+/* IMAGEM */
+
+.inicio-imagem img {
+    width: 420px;
+    height: 420px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid #d63384;
+
+    box-shadow: 0 8px 25px rgba(214, 51, 132, 0.25);
+}
+
+
+/* TEXTO */
+
+.inicio-conteudo {
+    max-width: 550px;
+}
+
+.inicio-conteudo h1 {
+    color: #d63384;
+
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+.inicio-conteudo h2 {
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+.inicio-conteudo p {
+    font-size: 20px;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+
+/* BOTÃO PRINCIPAL */
+
+.botao-principal {
+    display: inline-block;
+
+    background-color: #d63384;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 15px 30px;
+
+    border-radius: 30px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    transition: 0.3s;
+
+    box-shadow: 0 5px 15px rgba(214, 51, 132, 0.3);
+}
+
+.botao-principal:hover {
+    background-color: #b5256d;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.secao {
+    padding: 90px 8%;
+}
+
+.titulo-secao {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.titulo-secao h2 {
+    color: #d63384;
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+}
+
+.titulo-secao p {
+    font-size: 18px;
+
+    color: #666;
+}
+
+
+/* =========================
+   GALERIA
+========================= */
+
+.galeria {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.foto {
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+    background-color: #fff;
+}
+
+.foto img {
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.4s;
+}
+
+.foto:hover img {
+    transform: scale(1.07);
+}
+
+
+/* =========================
+   SERVIÇOS
+========================= */
+
+.servicos {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.card-servico {
+    background-color: white;
+
+    border: 1px solid #f1c4d8;
+
+    border-radius: 20px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.card-servico:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 25px rgba(214, 51, 132, 0.18);
+}
+
+.card-servico h3 {
+    color: #d63384;
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+.card-servico p {
+    color: #666;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+.card-servico strong {
+    display: block;
+
+    color: #222;
+
+    font-size: 25px;
+
+    margin-bottom: 25px;
+}
+
+.card-servico a {
+    display: inline-block;
+
+    background-color: #d63384;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 25px;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+}
+
+.card-servico a:hover {
+    background-color: #b5256d;
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.sobre {
+    background-color: #fff0f6;
+
+    padding: 90px 8%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+.sobre-imagem img {
+    width: 300px;
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid #d63384;
+}
+
+.sobre-conteudo {
+    max-width: 600px;
+}
+
+.sobre-conteudo h2 {
+    color: #d63384;
+
+    font-size: 35px;
+
+    margin-bottom: 25px;
+}
+
+.sobre-conteudo p {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   AGENDAMENTO
+========================= */
+
+.agendamento {
+    background-color: white;
+}
+
+.formulario-agendamento {
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 40px;
+
+    background-color: #fff0f6;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+    color: #333;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #e2a9c4;
+
+    border-radius: 10px;
+
+    background-color: white;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: #d63384;
+
+    box-shadow: 0 0 0 2px rgba(214, 51, 132, 0.1);
+}
+
+
+/* BOTÃO DE CONFIRMAÇÃO */
+
+.botao-confirmar {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background-color: #d63384;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.botao-confirmar:hover {
+    background-color: #b5256d;
+}
+
+
+/* =========================
+   CONTATO
+========================= */
+
+.contato {
+    padding: 80px 8%;
+
+    background-color: #fff0f6;
+
+    text-align: center;
+}
+
+.contatos {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.contato-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    text-decoration: none;
+
+    color: #d63384;
+
+    background-color: white;
+
+    padding: 20px 40px;
+
+    border-radius: 15px;
+
+    font-weight: bold;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.contato-item strong {
+    font-size: 20px;
+}
+
+.contato-item span {
+    font-size: 14px;
+    color: #777;
+}
+.contato-item:hover {
+    transform: translateY(-3px);
+
+    background-color: #d63384;
+
+    color: white;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background-color: #d63384;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 900px) {
+
+    /* MENU */
+
+    .menu {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu ul {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+
+    /* INÍCIO */
+
+    .inicio {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding: 60px 30px;
+    }
+
+    .inicio-imagem img {
+        width: 320px;
+        height: 320px;
+    }
+
+    .inicio-conteudo {
+        max-width: 600px;
+    }
+
+    .inicio-conteudo h1 {
+        font-size: 40px;
+    }
+
+    .inicio-conteudo h2 {
+        font-size: 25px;
+    }
+
+
+    /* GALERIA */
+
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* SERVIÇOS */
+
+    .servicos {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+
+    /* SOBRE */
+
+    .sobre {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    /* MENU */
+
+    .menu {
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .menu ul {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .menu li {
+        margin: 0;
+    }
+
+    .menu a {
+        font-size: 13px;
+    }
+
+    .btn-agendar {
+        padding: 8px 15px;
+    }
+
+
+    /* INÍCIO */
+
+    .inicio {
+        min-height: auto;
+
+        padding: 50px 20px;
+    }
+
+    .inicio-imagem img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .inicio-conteudo h1 {
+        font-size: 34px;
+    }
+
+    .inicio-conteudo h2 {
+        font-size: 22px;
+        line-height: 1.4;
+    }
+
+    .inicio-conteudo p {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .botao-principal {
+        font-size: 16px;
+        padding: 14px 25px;
+    }
+
+
+    /* SEÇÕES */
+
+    .secao {
+        padding: 60px 20px;
+    }
+
+    .titulo-secao {
+        margin-bottom: 35px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 28px;
+    }
+
+    .titulo-secao p {
+        font-size: 16px;
+    }
+
+
+    /* GALERIA */
+
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .foto {
+        border-radius: 10px;
+    }
+
+    .foto img {
+        height: 190px;
+    }
+
+
+    /* SERVIÇOS */
+
+    .servicos {
+        gap: 20px;
+    }
+
+    .card-servico {
+        padding: 30px 20px;
+    }
+
+
+    /* SOBRE */
+
+    .sobre {
+        padding: 60px 20px;
+        gap: 30px;
+    }
+
+    .sobre-imagem img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .sobre-conteudo h2 {
+        font-size: 30px;
+    }
+
+    .sobre-conteudo p {
+        font-size: 17px;
+    }
+
+
+    /* AGENDAMENTO */
+
+    .formulario-agendamento {
+        padding: 25px 20px;
+    }
+
+    .campo input,
+    .campo select {
+        padding: 13px;
+    }
+
+
+    /* CONTATO */
+
+    .contato {
+        padding: 60px 20px;
+    }
+
+    .contatos {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contato-item {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* RODAPÉ */
+
+    footer {
+        padding: 25px 15px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================
+   CELULARES PEQUENOS
+========================= */
+
+@media (max-width: 400px) {
+
+    .inicio-imagem img {
+        width: 210px;
+        height: 210px;
+    }
+
+    .inicio-conteudo h1 {
+        font-size: 30px;
+    }
+
+    .inicio-conteudo h2 {
+        font-size: 20px;
+    }
+
+    .galeria {
+        gap: 8px;
+    }
+
+    .foto img {
+        height: 160px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+}
