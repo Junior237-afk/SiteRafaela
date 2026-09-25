@@ -1,0 +1,832 @@
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --rosa-principal: #c83f6b;
+    --rosa-escuro: #a92f55;
+    --rosa-medio: #dc7898;
+    --rosa-claro: #f9dce5;
+    --rosa-suave: #fff2f6;
+    --rosa-fundo: #fff5f8;
+
+    --branco: #ffffff;
+    --texto: #312631;
+    --texto-secundario: #786b77;
+    --borda: #f1d4dd;
+
+    --vermelho: #e74c5e;
+    --verde: #299764;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--texto);
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8fa 0%,
+            #fdebf1 50%,
+            #fff6f8 100%
+        );
+}
+
+
+/* ==============================
+   LOGIN
+================================ */
+
+.login-container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 420px;
+
+    padding: 42px 36px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid var(--borda);
+    border-radius: 24px;
+
+    box-shadow:
+        0 15px 45px rgba(190, 73, 110, 0.13);
+}
+
+.login-box h1 {
+    text-align: center;
+
+    color: var(--rosa-principal);
+
+    font-size: 28px;
+
+    margin-bottom: 8px;
+}
+
+.login-box > p {
+    text-align: center;
+
+    color: var(--texto-secundario);
+
+    margin-bottom: 30px;
+}
+
+#formLogin {
+    display: flex;
+    flex-direction: column;
+}
+
+#formLogin label {
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+#formLogin input {
+    width: 100%;
+    height: 48px;
+
+    padding: 0 14px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+
+    background: #fffafb;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+#formLogin input:focus {
+    border-color: var(--rosa-medio);
+
+    box-shadow:
+        0 0 0 4px rgba(200, 63, 107, 0.09);
+}
+
+#formLogin button {
+    height: 48px;
+
+    border: none;
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--rosa-principal),
+            #d85d84
+        );
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 18px rgba(200, 63, 107, 0.22);
+
+    transition: 0.2s;
+}
+
+#formLogin button:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 9px 22px rgba(200, 63, 107, 0.28);
+}
+
+#mensagemLogin {
+    margin-top: 18px;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   PAINEL
+================================ */
+
+.painel-admin {
+    min-height: 100vh;
+
+    padding: 30px 28px 60px;
+}
+
+.painel-container {
+    width: 100%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+}
+
+
+/* ==============================
+   CABEÇALHO
+================================ */
+
+.painel-topo {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 22px 25px;
+
+    margin-bottom: 25px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #ffe8ef,
+            #ffd6e2,
+            #ffeaf0
+        );
+
+    border: 1px solid rgba(200, 63, 107, 0.10);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 8px 25px rgba(190, 73, 110, 0.10);
+
+    overflow: hidden;
+}
+
+/* Detalhes decorativos do cabeçalho */
+
+.painel-topo::before {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    right: -70px;
+    top: -120px;
+
+    border: 2px solid rgba(200, 63, 107, 0.10);
+
+    border-radius: 50%;
+}
+
+.painel-topo::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    right: 80px;
+    bottom: -120px;
+
+    background: rgba(255, 255, 255, 0.28);
+
+    border-radius: 50%;
+}
+
+
+/* PERFIL */
+
+.perfil-admin {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+.foto-admin {
+    width: 86px;
+    height: 86px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid white;
+
+    outline: 3px solid var(--rosa-medio);
+
+    box-shadow:
+        0 7px 18px rgba(152, 54, 85, 0.18);
+}
+
+.perfil-texto {
+    display: flex;
+    flex-direction: column;
+}
+
+.painel-subtitulo {
+    color: var(--rosa-principal);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 4px;
+}
+
+.painel-topo h1 {
+    color: var(--rosa-escuro);
+
+    font-size: 30px;
+
+    margin-bottom: 5px;
+}
+
+.painel-topo p {
+    color: var(--texto-secundario);
+
+    font-size: 14px;
+}
+
+#btnSair {
+    position: relative;
+    z-index: 2;
+
+    padding: 11px 22px;
+
+    border: 1px solid rgba(200, 63, 107, 0.16);
+    border-radius: 11px;
+
+    background: rgba(255, 255, 255, 0.90);
+
+    color: var(--rosa-principal);
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#btnSair:hover {
+    background: var(--rosa-principal);
+    color: white;
+
+    transform: translateY(-1px);
+}
+
+
+/* ==============================
+   CARDS
+================================ */
+
+.card-admin {
+    position: relative;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(173, 70, 102, 0.08);
+}
+
+.card-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 22px;
+}
+
+.card-titulo h2 {
+    color: var(--rosa-escuro);
+
+    font-size: 21px;
+
+    margin-bottom: 5px;
+}
+
+.card-titulo p {
+    color: var(--texto-secundario);
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   CADASTRAR DISPONIBILIDADE
+================================ */
+
+.card-disponibilidade {
+    margin-bottom: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.97),
+            rgba(255, 246, 249, 0.97)
+        );
+}
+
+#formHorario {
+    display: grid;
+
+    grid-template-columns:
+        minmax(180px, 1fr)
+        minmax(150px, 1fr)
+        auto;
+
+    gap: 15px;
+
+    align-items: end;
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-form label,
+.filtro-data label {
+    color: #5e4650;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+.campo-form input,
+.filtro-data input {
+    width: 100%;
+    height: 46px;
+
+    padding: 0 13px;
+
+    border: 1px solid var(--borda);
+    border-radius: 11px;
+
+    background: #fffafb;
+
+    color: var(--texto);
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.campo-form input:focus,
+.filtro-data input:focus {
+    border-color: var(--rosa-medio);
+
+    box-shadow:
+        0 0 0 4px rgba(200, 63, 107, 0.08);
+}
+
+#formHorario button {
+    height: 46px;
+
+    padding: 0 23px;
+
+    border: none;
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--rosa-principal),
+            #d95e85
+        );
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 6px 16px rgba(200, 63, 107, 0.20);
+
+    transition: 0.2s;
+}
+
+#formHorario button:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 20px rgba(200, 63, 107, 0.27);
+}
+
+
+/* ==============================
+   HORÁRIOS + RESERVAS
+================================ */
+
+.painel-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(340px, 0.8fr)
+        minmax(450px, 1.2fr);
+
+    gap: 25px;
+
+    align-items: start;
+}
+
+
+/* ==============================
+   FILTROS
+================================ */
+
+.filtro-data {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid var(--borda);
+}
+
+.filtro-data input {
+    max-width: 230px;
+}
+
+
+/* ==============================
+   LISTAS
+================================ */
+
+.lista-conteudo {
+    max-height: 550px;
+
+    overflow-y: auto;
+
+    padding-right: 5px;
+}
+
+.lista-conteudo > p {
+    color: var(--texto-secundario);
+
+    font-size: 14px;
+}
+
+.lista-conteudo::-webkit-scrollbar {
+    width: 6px;
+}
+
+.lista-conteudo::-webkit-scrollbar-thumb {
+    background: #e7bdca;
+
+    border-radius: 10px;
+}
+
+
+/* ==============================
+   HORÁRIOS
+================================ */
+
+.horario-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    min-height: 57px;
+
+    padding: 11px 13px;
+
+    margin-bottom: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff8fa,
+            #fff1f5
+        );
+
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+
+    transition: 0.2s;
+}
+
+.horario-item:hover {
+    border-color: #e9b5c5;
+
+    transform: translateY(-1px);
+}
+
+.horario-item span {
+    color: #3d3037;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.btn-excluir {
+    padding: 8px 13px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #ffe6eb;
+
+    color: var(--vermelho);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-excluir:hover {
+    background: var(--vermelho);
+    color: white;
+}
+
+
+/* ==============================
+   RESERVAS
+================================ */
+
+#listaReservas {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.reserva-item {
+    padding: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffafb,
+            #fff1f5
+        );
+
+    border: 1px solid var(--borda);
+
+    border-left: 4px solid var(--rosa-principal);
+
+    border-radius: 13px;
+
+    box-shadow:
+        0 5px 15px rgba(173, 70, 102, 0.05);
+}
+
+.reserva-item strong {
+    display: block;
+
+    color: var(--rosa-escuro);
+
+    font-size: 17px;
+
+    margin-bottom: 12px;
+}
+
+.reserva-item p {
+    color: #65545d;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin-bottom: 5px;
+}
+
+
+/* ==============================
+   BOTÕES DAS RESERVAS
+================================ */
+
+.btn-whatsapp-reserva,
+.btn-cancelar-reserva {
+    padding: 9px 13px;
+
+    margin-top: 10px;
+    margin-right: 6px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-whatsapp-reserva {
+    background: #e6f6ed;
+
+    color: var(--verde);
+}
+
+.btn-whatsapp-reserva:hover {
+    background: var(--verde);
+    color: white;
+}
+
+.btn-cancelar-reserva {
+    background: #ffe6eb;
+
+    color: var(--vermelho);
+}
+
+.btn-cancelar-reserva:hover {
+    background: var(--vermelho);
+    color: white;
+}
+
+
+/* ==============================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+    .painel-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #formHorario {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #formHorario button {
+        grid-column: 1 / -1;
+    }
+}
+
+
+/* ==============================
+   CELULAR
+================================ */
+
+@media (max-width: 600px) {
+
+    .painel-admin {
+        padding: 15px 12px 35px;
+    }
+
+    .painel-topo {
+        padding: 18px 15px;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+    .perfil-admin {
+        gap: 12px;
+    }
+
+    .foto-admin {
+        width: 62px;
+        height: 62px;
+
+        border-width: 3px;
+        outline-width: 2px;
+    }
+
+    .painel-subtitulo {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .painel-topo h1 {
+        font-size: 21px;
+    }
+
+    .painel-topo p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    #btnSair {
+        padding: 8px 11px;
+
+        font-size: 12px;
+    }
+
+    .card-admin {
+        padding: 19px;
+
+        border-radius: 16px;
+    }
+
+    #formHorario {
+        grid-template-columns: 1fr;
+    }
+
+    #formHorario button {
+        grid-column: auto;
+
+        width: 100%;
+    }
+
+    .filtro-data input {
+        max-width: none;
+    }
+
+    .lista-conteudo {
+        max-height: 450px;
+    }
+
+    .reserva-item {
+        padding: 15px;
+    }
+
+    .btn-whatsapp-reserva,
+    .btn-cancelar-reserva {
+        width: 100%;
+
+        margin-right: 0;
+    }
+}
